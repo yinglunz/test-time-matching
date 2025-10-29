@@ -1,0 +1,24 @@
+python3 main.py \
+    --model siglip-b16-224 \
+    --dataset winoground \
+    --use_wandb \
+    --cuda_device 0 \
+    --iterations 10 \
+    --batch_size 50 \
+    --eval_batch_size 100 \
+    --matching_method group \
+    --threshold_start 2.0 \
+    --threshold_end 0 \
+    --threshold_schedule linear\
+    --lr 1e-5 \
+    --lr_schedule cosine \
+    --epochs 30 \
+    --lr_restart 0.95 \
+    --min_lr_factor 0.1 \
+    --train_augmentation 0 \
+    --augmentation_resize_factor 1.1 \
+    --tag hyperparameter\
+    --weight_decay 0.05 \
+    --keep_opt_states 1 \
+    --save_results 1 \
+    --random_seed 42

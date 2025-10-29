@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttm"
+version = "0.1.0"
+description = "Text-to-text model training framework"
+requires-python = ">=3.10"
+dependencies = [
+    "torch==2.8.0",
+    "torchvision==0.23.0",
+    "transformers==4.49.0",
+    "numpy<2.0.0",
+    "scipy==1.15.3",
+    "sentencepiece==0.2.1",
+    "datasets==4.0.0",
+    "pandas==2.3.2",
+    "wandb",
+    "jupyter",
+    "matplotlib",
+    "gdown",
+    "pyyaml"
+]
+
+[tool.setuptools]
+py-modules = ["main", "model", "dataset", "match", "train", "evaluate", "utils"]
